@@ -29,7 +29,7 @@ public class HelloController {
     }
 
     @GetMapping("hello-api")
-    @ResponseBody // 2. MappingJackson2HttpMessageConverter 문자가 아니고 객체면 JSON으로 변환 후 HTTP 응답에 반환(Default)
+    @ResponseBody // 2. MappingJackson2HttpMessageConverter 문자가 아니고 객체면 Json 으로 변환 후 HTTP 응답에 반환(Default)
     public Hello helloApi(@RequestParam("name") String name) {
         Hello hello = new Hello();
         hello.setName(name);
