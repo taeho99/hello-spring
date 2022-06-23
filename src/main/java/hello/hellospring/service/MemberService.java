@@ -12,7 +12,11 @@ import java.util.Optional;
  * repository 클래스는 단순 저장소에 넣었다 뺐다 하는 메서드명
  */
 public class MemberService {
-    private final MemberRepository memberRepository= new MemoryMemberRepository();
+    private final MemberRepository memberRepository;
+
+    public MemberService(MemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
 
     /**
      * 회원 가입
