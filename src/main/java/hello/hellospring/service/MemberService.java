@@ -13,11 +13,9 @@ import java.util.Optional;
  * service 클래스는 비지니스와 가까운 메서드명
  * repository 클래스는 단순 저장소에 넣었다 뺐다 하는 메서드명
  */
-@Service
 public class MemberService {
     private final MemberRepository memberRepository;
 
-    @Autowired
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
