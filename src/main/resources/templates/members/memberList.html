@@ -12,6 +12,7 @@
             </thead>
             <tbody>
             <tr th:each="member : ${members}">
+                <!-- 자바빈 프로퍼티 접근법: thymeleaf가 내부적으로 member.getId(), member.getName() 호출 -->
                 <td th:text="${member.id}"></td>
                 <td th:text="${member.name}"></td>
             </tr>

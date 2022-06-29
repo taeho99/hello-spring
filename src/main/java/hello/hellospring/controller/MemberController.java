@@ -25,6 +25,9 @@ public class MemberController {
         return "members/createMemberForm";
     }
 
+    // 데이터 바인딩 방식에는 2가지가 있다.
+    // 1. @RequestParam 으로 바인딩
+    // 2. 객체를 바로 바인딩하는 방식(아래와 같음)
     @PostMapping("/members/new")
     public String create(MemberForm form) {
         Member member = new Member();
